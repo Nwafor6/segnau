@@ -1,0 +1,53 @@
+{%extends 'partials/base.html'%}
+{%load static%}
+{% load crispy_forms_tags %}
+{%block title%}Contact-us{%endblock%}
+{%block content%}
+      <!-- Join us Page Starts -->
+      <div class="join-us-main ">
+        <div class="j-form">
+          <h6>We are quick in replying mails. Try us out.. <span><i class="ri-emotion-happy-fill"></i></span><span><i class="ri-emotion-happy-fill"></i></span></h6>
+          <form method="post">
+            {%csrf_token%}
+            <div >{{form|crispy}}</div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </form>
+        </div>
+      </div>
+      <!-- End of Join -->
+{%endblock%}
+<!-- <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationTooltip01">First name</label>
+                <input type="text" class="form-control" id="validationTooltip01" Placeholder="southeastdev" required name="fname">
+                <div class="valid-tooltip">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationTooltip02">Last name</label>
+                <input type="text" class="form-control" id="validationTooltip02" placeholder="Christain Glory" required name="lname">
+                <div class="valid-tooltip">
+                  Looks good!
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationTooltip03">Email</label>
+                <input type="email" class="form-control" id="validationTooltip03" required placeholder="nwaforglory6@gmail.com" name="email">
+                <div class="invalid-tooltip">
+                  Please provide a valid city.
+                </div>
+              </div>
+              <div class="col-md-9 col-sm-12 mb-3">
+                 <div class="mb-3">
+                    <label for="validationTextarea">Message</label>
+                    <textarea class="form-control" id="validationTextarea" placeholder="Hello I am Christain Glory a devloper.." required name="messgae"></textarea>
+                  </div>
+              </div>
+            </div>
+            <h6 class="text-danger">Note: It is import you include your mail so we can reply you as soon as we can.</h6>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </form> -->

@@ -1,0 +1,32 @@
+{%extends 'partials/base.html'%}
+{%load static%}
+{%block title%}About-us{%endblock%}
+{%block content%}
+	{%if joindb%}
+	<div class="databaseview">
+		<div class="card shadow">
+		  <h5 class="card-header">Name: {{joindb.first_name}} {{joindb.last_name}}</h5>
+		  <div class="card-body">
+		    <p class="card-text">Emai: {{joindb.email_address}}</p>
+		    <p class="card-text">School: {{joindb.affilate_uni}}</p>
+		    <p class="card-text">SEG ID: {{joindb.seg_id}}</p>
+		    <p class="card-text">DOB: {{joindb.DOB}}</p>
+		  </div>
+		</div>
+	</div>
+	{%endif%}
+	{%if contactdb%}
+	<div class="databaseview ">
+		<div class="card shadow">
+		  <h5 class="card-header">Name: {{contactdb.first_name}} {{contactdb.last_name}}</h5>
+		  <div class="card-body">
+		    <p class="card-text">Email: {{contactdb.email_address}}</p>
+		    <p class="card-text">Message: {{contactdb.message}}</p>
+		    <p class="card-text">Received: {{contactdb.date_sent}}</p>
+		  </div>
+		</div>
+	</div>
+	{%endif%}
+
+
+{%endblock%}

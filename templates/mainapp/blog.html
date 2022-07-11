@@ -1,0 +1,45 @@
+{%extends 'partials/base.html'%}
+{%load static%}
+{% load crispy_forms_tags %}
+{%block title%}Blog{%endblock%}
+{%block content%}
+      <div class="blog-main-cont">
+        <div class="blog-body-cont">
+          <div class="blog-body row">
+            <div class="col-md-6 col-sm-12 posts">
+              <div class="latest-posts"><h4>Latest Posts</h4></div>
+              <div class="card blog-card">
+                  <img src="{%static 'images/fdcamp.jpg'%}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer...<a href="#">Read More</a></p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div>
+              </div>
+              <div class="card blog-card">
+                  <img src="{%static 'images/equ.jpg'%}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer...<a href="#">Read More</a></p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 category">
+              <div class="category-heading"><h4>Category</h4><hr></div>
+              <div class="category-body">
+                <form method="post">
+                  {%csrf_token%}
+                  <div >{{form|crispy}}</div>
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        {%endblock%}

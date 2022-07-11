@@ -1,0 +1,81 @@
+{%extends 'partials/base.html'%}
+{%load static%}
+{%block title%}About-us{%endblock%}
+{%block content%}
+
+
+<div class="database">
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Use Desktop View </strong> for fullscale view
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+	<h4 class="text-center">Manage Database</h4>
+	<div class="row">
+		<div class=" col-md-12">
+			<h5>Membership Request</h5>
+			<table class="table shadow">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">#</th>
+			      <th scope="col">First Name</th>
+			      <th scope="col">Last Name</th>
+			      <th scope="col">Email</th>
+			      <th scope="col">SEG ID</th>
+			      <th scope="col">Affilate Uni</th>
+			      <th scope="col">DOB</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	{% for i in joindb%}
+			    <tr>
+			      <th scope="row">{{forloop.counter}}</th>
+			      <td><a href="{%url 'database' i.pk%}">{{i.first_name}}</a></td>
+			      <td>{{i.last_name}}</td>
+			      <td>{{i.email_address|slice:":10"}}..</td>
+			      {% if not i.seg_id %}
+			      <td>NIL</td>
+			      {%else%}
+			      <td>{{i.seg_id}}</td>
+			      {%endif%}
+			      <td>{{i.affilate_uni}}</td>
+			      <td>{{i.DOB|timesince}}</td>
+			    </tr>
+			    {%endfor%}
+			  </tbody>
+			</table><hr>
+		</div>
+		<div class=" col-md-12">
+			<h5>Contact Resquest</h5>
+			<table class="table shadow">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">#</th>
+			      <th scope="col">First Name</th>
+			      <th scope="col">Last Name</th>
+			      <th scope="col">Email</th>
+			      <th scope="col">Message</th>
+			      <th scope="col">Recieved on</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	{% for i in contactdb%}
+			    <tr>
+			      <th scope="row">{{forloop.counter}}</th>
+			      <td><a href="{%url 'database1' i.pk%}">{{i.first_name}}</a></td>
+			      <td>{{i.last_name}}</td>
+			      <td>{{i.email_address|slice:":10"}}</td>
+			      <td>{{i.message}}</td>
+			      <td>{{i.date_sent|timesince}}</td>
+			    </tr>
+			    {%endfor%}
+			  </tbody>
+			</table><hr>
+		</div>
+	</div>
+</div>
+
+
+
+{%endblock%}
