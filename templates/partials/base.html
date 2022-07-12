@@ -42,10 +42,11 @@
             <li class="nav-item">
               <a class="nav-link " href=" {% url 'contact'%}">Contact</a>
             </li>
+            {%if user.is_authenticated%}
             <li class="nav-item">
               <a class="nav-link " href=" {% url 'database'%}">Database</a>
             </li>
-
+            {%endif%}
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search for post..." aria-label="Search">
@@ -82,13 +83,14 @@
 
       </div>
       <div style="margin-bottom: 30px; padding: 5px;"> <a href="#top" class="btn btn-outline-primary btn-sm round" style="float:right;"><i class="ri-arrow-up-line" style="font-size:15px; font-weight: bold;"></i></i></a></div>
-       <div class="Footer">
+       <div class="Footer ">
           <div class="Text">
             <p>
-              © 2022 | Privacy Policy <br>
-              Website designed by southeastdev 
+              
+              Website designed by southeastdev<br>
+              © 2022 | Privacy Policy 
             </p>
-            <p>Click on the icon to connect with us on twitter<span> <a class="mytwitter" href="https://twitter.com/southeastdev"><i class="ri-twitter-fill"></i></a></span></p>
+            <p><span> <a class="mytwitter" href="https://twitter.com/southeastdev"><i class="ri-twitter-fill"></i></a></span></p>
           </div>
         </div>
     </div>

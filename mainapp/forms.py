@@ -16,10 +16,10 @@ class ContactForm(forms.ModelForm):
 
 class JoinForm(forms.ModelForm):
 	email_address= forms.CharField(widget=forms.TextInput(attrs={"placeholder":"@example.com"}))
-	DOB=forms.DateField(widget=forms.DateInput(attrs=dict(type='date')))
+	Date_of_Birth=forms.DateField(widget=forms.DateInput(attrs=dict(type='date')))
 
 	class Meta:
 		model=JoinDb
-		fields=['first_name', 'last_name', 'email_address',"seg_id",'affilate_uni', 'DOB']
+		fields=['first_name', 'last_name', 'email_address',"seg_id",'affilate_uni', 'Date_of_Birth']
 
 

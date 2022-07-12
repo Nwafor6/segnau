@@ -32,7 +32,7 @@ class JoinDb(models.Model):
     last_name=models.CharField(max_length=50)
     email_address=models.EmailField(max_length=50)
     affilate_uni=models.CharField(max_length=100)
-    DOB=models.DateTimeField()
+    Date_of_Birth=models.DateTimeField()
     seg_id=models.PositiveIntegerField(blank=True, null=True, help_text="Renewers only !!")
     date_sent=models.DateTimeField(auto_now_add=True)
 

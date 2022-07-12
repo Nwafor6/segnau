@@ -1,0 +1,29 @@
+{%extends 'partials/base.html'%}
+{%load static%}
+{% load crispy_forms_tags %}
+{%block title%}Blog{%endblock%}
+{%block content%}
+      <div class="blog-main-cont">
+        <div class="blog-body-cont">
+        	<div class="latest-posts"><h3 class="text-center">{{post.title|upper}}</h3><hr></div>
+          <div class="blog-body row">
+            <div class="col-md-6 col-sm-12 posts">
+              <div class="card blog-card">
+                  <img src="{{post.image.url}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <p class="card-text">{{post.body}}</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">{{post.pub_on|time}}</small>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 category">
+              <div class="category-heading"><h4>Category</h4><hr></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        {%endblock%}      }
