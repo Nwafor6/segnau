@@ -35,7 +35,13 @@ def DatabaseView(request):
 def DatabaseDetailView(request, pk):
 	joindb=JoinDb.objects.get(pk=pk)
 	return render(request, 'mainapp/databaseview.html', {'joindb':joindb})
-	 
+
 def DatabaseDetailView_2(request, pk):
 	contactdb=ContactDb.objects.get(pk=pk)
 	return render(request, 'mainapp/databaseview.html', {"contactdb":contactdb}) 	
+
+def handler404(request, exception):
+    return render(request, 'mainapp/404.html', status=404)
+
+def handler500(request):
+    return render(request, 'mainapp/500.html', status=500)

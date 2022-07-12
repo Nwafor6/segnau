@@ -1,0 +1,176 @@
+html,body{
+	margin: 0;
+	overflow-x: hidden;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	
+
+}
+
+.navbar-light .navbar-nav .nav-link, .active>.nav-link{
+	color: #000000E6
+}
+.bg-img{
+	background-size: cover;
+	width: 100%;
+	position: relative;
+	background-position: center;
+	min-height:70vh;
+
+}
+.navbar-brand {
+	width: 10%;
+}
+.navbar-brand > img {
+	width: 100px;
+}
+.index-main{
+	margin: 0 2rem;
+}
+._more{
+	text-align: center;
+}
+.carousel-inner{
+	transition: all, 0.5sec;
+}
+.text p{
+	width: 100%;
+}
+.img-fluid{
+	width: 100%;
+	padding:40px;	
+}
+.row1{
+	outline: 1px solid black;
+	margin: 20px 0;
+	padding: 10px;
+}
+@media(max-width:768px){
+	.img-fluid{
+	width: 100%;
+	padding:00px;
+	
+}
+}
+.col-lg-4 ,.col-md-6, .sm-12{
+	margin: 5px 0;
+}
+.more2{
+	text-align: right;
+	padding: 10px;
+	font-weight: bold;
+}
+.showmore1{
+	display: none;
+}
+.arch{
+	text-align: center;
+	background-color: rgba(0, 0, 0, .01);
+	padding: 10px;
+
+}
+.social-links{
+	text-align: center;
+	font-size: 30px;
+
+}
+.social-links  ul{
+	display: flex;
+	list-style: none;
+	justify-content: space-evenly;
+	margin: 0 auto;
+	column-gap: 2px;
+	width: 40%;
+	padding: 0;
+
+
+
+
+}
+.social-links > ul li{
+	display: block;
+
+}
+.social-links > ul li a {
+	text-decoration: none;
+	transition: all .5s;
+}
+.social-links > ul li a:hover,active {
+	font-size: 35px;
+}
+.Footer{
+	background-color: #0f74e2a8;
+	padding: 10px;
+	color: #ffff;
+}
+.mytwitter{
+	font-size: 20px;
+}
+
+/*About us*/
+.abt-main{
+	margin: 0 5rem;
+}
+.col-lg-6, .col-md-12{
+	padding:5px;
+}
+.abt-main{
+	margin-top: 100px;
+	padding: 20px;
+} 
+.abt-img{
+	width: 100%;
+	
+}
+.card1{
+	width: 100%;
+	position: relative;
+
+}
+
+.abt-cont .body{
+	padding: 10px;
+}
+.card1 i{
+	font-size: 15px;
+	margin-left: 5px;
+}
+@media(max-width: 768px){
+	.abt-main{
+	margin: 0 2rem;
+	margin-top: 100px;
+	}
+	
+
+}
+
+/*end of about*/
+/*join us*/ 
+.join-us-main{
+	margin: 100px 2rem 20px 2rem
+}
+
+.ri-emotion-happy-fill{
+	/*color: yellow;*/
+	font-size: 20px;
+}
+/*end of join us*/
+
+/*blog page*/
+.blog-main-cont{
+	margin: 100px 2rem 20px 2rem
+}
+.blog-card{
+	margin-bottom: 10px;
+
+}
+.blog-card img{
+	width: 100%;
+}
+/*End of blogpage*/
+/*Database*/
+.database, .databaseview{
+	margin: 100px 2rem 20px 2rem
+}
+/*End database*/
